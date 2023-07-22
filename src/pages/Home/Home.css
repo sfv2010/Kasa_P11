@@ -1,0 +1,19 @@
+.mainContainer {
+    padding: 20px;
+}
+.mainBox {
+    max-width: 1240px;
+    margin: auto;
+    padding: 20px;
+    background-color: rgba(246, 246, 246, 1);
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.mainBox:after {
+    content: "";
+    display: block;
+    width: 380px;
+    height: 0;
+}

@@ -1,0 +1,30 @@
+.headerContainer {
+    padding: 40px 20px 60px;
+}
+.headerBox {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1250px;
+    height: 63px;
+    margin: auto;
+}
+.headerLogo {
+    width: 220px;
+    height: 63px;
+}
+.headerMenu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 63px;
+    width: 280px;
+}
+.headerLinkActive,
+.headerLink {
+    font-size: 24px;
+    color: #ff6060;
+    text-decoration: none;
+}
+.headerLinkActive {
+    text-decoration: underline;
+}
