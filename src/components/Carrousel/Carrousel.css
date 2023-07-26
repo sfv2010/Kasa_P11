@@ -1,0 +1,29 @@
+.carrouselContainer {
+    max-width: 1240px;
+    margin: auto;
+    height: 415px;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(100, 135, 163);
+}
+.carrouselImg {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+.arrowBack,
+.arrowForward {
+    width: 96px;
+    position: absolute;
+    cursor: pointer;
+}
+.arrowBack {
+    left: 20px;
+}
+.arrowForward {
+    right: 20px;
+}
