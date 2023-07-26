@@ -11,7 +11,7 @@
     height: 39.44px;
     margin-top: 50%;
 }
-span {
+.footerSpan {
     font-size: 24px;
     font-weight: 500;
     color: rgba(255, 255, 255, 1);
