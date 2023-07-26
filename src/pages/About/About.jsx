@@ -8,12 +8,14 @@ const About = () => {
         <main>
             <Banner img={bannerAbout} />
             {aboutDatas.map((data) => (
-                <Collapse
-                    key={data.id}
-                    id={data.id}
-                    title={data.title}
-                    description={data.description}
-                />
+                <div className="aboutCollapse">
+                    <Collapse
+                        key={data.id}
+                        id={data.id}
+                        title={data.title}
+                        description={data.description}
+                    />
+                </div>
             ))}
         </main>
     );
