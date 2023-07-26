@@ -4,6 +4,7 @@ import Page404 from "./pages/Page404/Page404.jsx";
 import About from "./pages/About/About.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 import Header from "./components/Header/Header.jsx";
+import Accommodation from "./pages/Accommodation /Accommodation.jsx";
 
 const App = () => {
     return (
@@ -12,6 +13,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/accommodation/:id" element={<Accommodation />} />
                 <Route path="*" element={<Page404 />} />
             </Routes>
             <Footer />
