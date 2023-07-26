@@ -13,7 +13,7 @@ const Footer = () => {
                 />
             </Link>
 
-            <span>© 2020 Kasa. All rights reserved</span>
+            <span className="footerSpan">© 2020 Kasa. All rights reserved</span>
         </footer>
     );
 };
