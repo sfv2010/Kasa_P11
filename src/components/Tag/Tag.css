@@ -1,0 +1,14 @@
+.accomTagContainer {
+    display: flex;
+    justify-content: left;
+}
+.accomTag {
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 10px;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 96, 96, 1);
+}
