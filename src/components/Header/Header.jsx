@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import "./Header.css";
-import logoKasa from "../../assets/logo.svg"; //pourquoi on doit importer
+import logoKasa from "../../assets/logo.svg";
 
 const Header = () => {
     return (
@@ -20,7 +20,7 @@ const Header = () => {
                         className={(nav) =>
                             nav.isActive ? "headerLinkActive" : "headerLink"
                         }>
-                        Accueile
+                        Accueil
                     </NavLink>
                     <NavLink
                         to="/about"
