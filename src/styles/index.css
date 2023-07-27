@@ -4,11 +4,7 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     list-style: none;
+    text-decoration: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-/* code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-        monospace;
-} */
