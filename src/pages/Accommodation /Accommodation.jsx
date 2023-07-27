@@ -3,54 +3,63 @@ import { useParams } from "react-router-dom";
 import Carrousel from "../../components/Carrousel/Carrousel";
 import Collapse from "../../components/Collapse/Collapse";
 import "./Accommodation.css";
+import Tag from "../../components/Tag/Tag";
+import Page404 from "../Page404/Page404";
+import StarRating from "../../components/StarRating/ StarRating";
 
 const Accommodation = () => {
     const { id } = useParams();
-
-    const accomodation = datas.find((object) => object.id === id);
-    if (!accomodation) {
-        return;
+    const accomDetails = datas.find((data) => data.id === id);
+    if (!accomDetails) {
+        return <Page404 />;
     }
-    const { title, location, host, tags, description, equipments } =
-        accomodation;
+    const {
+        pictures,
+        title,
+        location,
+        host,
+        tags,
+        rating,
+        description,
+        equipments,
+    } = accomDetails;
+    const equipmentString = equipments.join("\n");
 
     return (
         <main className="accomContainer">
-            <Carrousel />
+            <Carrousel pictures={pictures} />
 
             <section className="accomBox">
-                <div
-                    className="accomGrid
-				">
-                    <h1 className="accomH1">{title}</h1>
-                    <h2 className="accomH2">{location}</h2>
+                <div className="accomFlex">
+                    <div className="accomTitleContainer">
+                        <h1 className="accomH1">{title}</h1>
+                        <h2 className="accomH2">{location}</h2>
 
-                    <div className="accomProfile">
-                        <h3 className="accomCenter">{host.name}</h3>
+                        <Tag tags={tags} />
                     </div>
-                    <div className="accomImgContainer">
-                        <img
-                            src={host.picture}
-                            alt={host.name}
-                            className="accomImg "
-                        />
+                    <div className="accomProfileStar">
+                        <div className="accomProfile">
+                            <h3 className="accomName">{host.name}</h3>
+                            <img
+                                src={host.picture}
+                                alt={host.name}
+                                className="accomImg"
+                            />
+                        </div>
+                        <div className="accomStar">
+                            <StarRating rating={rating} />
+                        </div>
                     </div>
                 </div>
-                <div className="accomTagContainer">
-                    <div className="accomTagbox"></div>
-                    {tags.map((tag) => (
-                        <span className="accomTag" key={tag}>
-                            {tag}
-                        </span>
-                    ))}
-                </div>
-                <div>☆☆</div>
                 <div className="accomCollapse">
                     <div className="accomCollapseBox">
                         <Collapse
                             key={id}
                             title="Description"
                             description={description}
+                            summaryBar="accomBar"
+                            summaryTitle="accomTitle"
+                            detailsDesc="accomDesc"
                         />
                     </div>
 
@@ -58,7 +67,10 @@ const Accommodation = () => {
                         <Collapse
                             key={id}
                             title="Équipements"
-                            description={equipments}
+                            description={equipmentString}
+                            summaryBar="accomBar"
+                            summaryTitle="accomTitle"
+                            detailsDesc="accomDesc"
                         />
                     </div>
                 </div>
