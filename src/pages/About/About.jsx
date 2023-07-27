@@ -7,13 +7,18 @@ const About = () => {
     return (
         <main>
             <Banner img={bannerAbout} />
-            {aboutDatas.map((data) => (
-                <div className="aboutCollapse">
+            {aboutDatas.map((data, index) => (
+                <div
+                    className={`aboutCollapse ${
+                        index === 0 ? "firstCollapse" : ""
+                    }`}
+                    key={data.id}>
                     <Collapse
-                        key={data.id}
                         id={data.id}
                         title={data.title}
                         description={data.description}
+                        summaryTitle="collapseH2"
+                        detailsDesc="collapseP"
                     />
                 </div>
             ))}
