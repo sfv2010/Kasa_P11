@@ -41,7 +41,6 @@
     }
     .bannerContainer {
         height: 111px;
-        text-align: center;
         word-wrap: break-word;
     }
     .bannerContainer:before,
@@ -52,5 +51,6 @@
         font-size: 23px;
         width: 217px;
         text-align: left;
+        left: 40%;
     }
 }
