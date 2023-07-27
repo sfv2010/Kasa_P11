@@ -6,7 +6,8 @@ const Page404 = () => {
         <div className="errorContainer">
             <img src={error} alt="Erreur 404" className="errorImg" />
             <h1 className="errorH1">
-                Oups! La page que vous demandez n'existe pas.
+                Oups! La page que <br className="brResp" /> vous demandez
+                n'existe pas.
             </h1>
             <Link to="/">
                 <p className="errorP">Retourner sur la page d’accueil</p>
