@@ -1,5 +1,5 @@
 import "./Card.css";
-const Card = ({ id, title, cover }) => {
+const Card = ({ title, cover }) => {
     return (
         <div className="cardContainer">
             <div className="card">
