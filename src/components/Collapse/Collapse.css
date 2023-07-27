@@ -1,6 +1,3 @@
-.collapseContainer {
-    padding: 20px;
-}
 summary {
     max-width: 1023px;
     margin: auto;
@@ -15,16 +12,21 @@ summary {
     cursor: pointer;
     display: block;
 }
+
+.accomBar {
+    background-size: 18px;
+}
 details[open] summary {
     background-image: url("../../assets/vectorUp.svg");
+    transition: 0.3s;
 }
 details[open] .collapse {
     animation: fadeIn 0.5s ease-out forwards;
 }
 @keyframes fadeIn {
     0% {
-        opacity: 0; /* 透明 */
-        transform: translateY(-5px); /* 上から表示 */
+        opacity: 0;
+        transform: translateY(-5px);
     }
     100% {
         opacity: 1;
@@ -40,13 +42,42 @@ details[open] .collapse {
 }
 .collapse {
     max-width: 1023px;
-    margin: 0 auto 3%;
+    margin: 0 auto;
     padding: 2%;
     border-radius: 0 0 10px 10px;
     background-color: rgba(246, 246, 246, 1);
 }
-.collapseH3 {
+.collapseP {
     font-size: 24px;
     font-weight: 400;
-    color: rgba(255, 96, 96, 1);
+    line-height: 25.67px;
+}
+.accomTitle {
+    margin-left: 1%;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+.accomDesc {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.67px;
+    white-space: pre-line;
+}
+
+@media screen and (max-width: 810px) {
+    .summary {
+        padding: 5px;
+    }
+    .collapseH2,
+    .accomTitle {
+        font-size: 13px;
+    }
+    .accomBar {
+        background-size: 18px;
+    }
+    .collapseP,
+    .accomDesc {
+        font-size: 12px;
+    }
 }

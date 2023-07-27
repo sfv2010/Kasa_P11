@@ -28,3 +28,24 @@
 .headerLinkActive {
     text-decoration: underline;
 }
+
+@media screen and (max-width: 810px) {
+    .headerContainer {
+        padding: 20px;
+    }
+    .headerBox {
+        height: 47px;
+    }
+    .headerLogo {
+        width: 145px;
+        height: 47px;
+    }
+    .headerMenu {
+        width: 140px;
+        height: 47px;
+    }
+    .headerLinkActive,
+    .headerLink {
+        font-size: 12px;
+    }
+}

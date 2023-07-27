@@ -7,13 +7,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: rgb(100, 135, 163);
 }
 .carrouselImg {
     width: 100%;
     height: 100%;
     border-radius: 25px;
+    object-fit: cover;
 }
 .arrowBack,
 .arrowForward {
@@ -26,4 +25,29 @@
 }
 .arrowForward {
     right: 20px;
+}
+.carrouselNumber {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 18px;
+    color: rgba(255, 255, 255, 1);
+}
+
+@media screen and (max-width: 810px) {
+    .carrouselContainer {
+        height: 255px;
+        border-radius: 10px;
+    }
+    .carrouselImg {
+        border-radius: 10px;
+    }
+    .arrowBack,
+    .arrowForward {
+        width: 24px;
+    }
+    .carrouselNumber {
+        display: none;
+    }
 }

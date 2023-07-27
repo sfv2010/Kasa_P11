@@ -2,10 +2,9 @@
     padding: 20px;
 }
 .card {
-    width: 340px;
+    max-width: 340px;
     height: 340px;
     border-radius: 10px;
-    background: rgba(255, 96, 96, 1);
     position: relative;
     transition: 0.3s;
     cursor: pointer;
@@ -43,4 +42,20 @@
     position: absolute;
     left: 20px;
     top: 268px;
+}
+
+@media screen and (max-width: 810px) {
+    .cardContainer {
+        margin-top: 20px;
+        padding: 0;
+    }
+    .card {
+        max-width: none;
+        height: 255px;
+    }
+    .cardH2 {
+        max-width: 295px;
+        left: 20px;
+        top: 195px;
+    }
 }

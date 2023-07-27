@@ -34,3 +34,23 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@media screen and (max-width: 810px) {
+    .banner {
+        padding: 0 20px;
+    }
+    .bannerContainer {
+        height: 111px;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    .bannerContainer:before,
+    .bannerImg {
+        border-radius: 10px;
+    }
+    .bannerH1 {
+        font-size: 23px;
+        width: 217px;
+        text-align: left;
+    }
+}

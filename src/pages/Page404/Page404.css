@@ -4,7 +4,11 @@
     text-align: center;
 }
 .errorImg {
+    margin-top: 7%;
     width: 40%;
+}
+.brResp {
+    display: none;
 }
 .errorH1,
 .errorP {
@@ -15,11 +19,31 @@
 }
 .errorP {
     font-size: 18px;
-    margin-top: 7%;
+    margin: 9% 0 3%;
     cursor: pointer;
     transition: 0.3s;
+    text-decoration: underline;
 }
 .errorP:hover {
     transform: scale(1.1);
     transition: 0.3s;
+}
+
+@media screen and (max-width: 810px) {
+    .errorImg {
+        margin-top: 150px;
+        width: 198px;
+    }
+    .errorH1 {
+        font-size: 18px;
+        padding: 20px 10px;
+        word-break: break-word;
+    }
+    .errorP {
+        font-size: 14px;
+        margin: 150px 0 50px;
+    }
+    .brResp {
+        display: block;
+    }
 }

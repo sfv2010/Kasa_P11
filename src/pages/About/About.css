@@ -1,6 +1,12 @@
-.aboutContainer {
-    max-width: 1500px;
-}
 .aboutCollapse {
     padding: 20px;
+}
+
+@media screen and (max-width: 810px) {
+    .aboutCollapse {
+        padding: 15px 20px;
+    }
+    .firstCollapse {
+        margin-top: 20px;
+    }
 }
